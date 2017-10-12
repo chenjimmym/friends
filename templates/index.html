@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Friends</title>
+</head>
+
+<body>
+    <h2>Friends:</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Since</th>
+        </tr>
+        <tr>
+            <td>Jay Patel</td>
+            <td>190</td>
+            <td>2015</td>
+        </tr>
+        <tr>
+            <td>Brendan Stanton</td>
+            <td>175</td>
+            <td>2015</td>
+        </tr>
+        <tr>
+            <td>Eli Byers</td>
+            <td>120</td>
+            <td>2016</td>
+        </tr>
+        <tr>
+            <td>Anna Propas</td>
+            <td>98</td>
+            <td>1987</td>
+        </tr>
+        {% for friend in tempp: %}
+        <tr>
+            <td>{{ friend['name'] }}</td>
+            <td>{{ friend['age'] }}</td>
+            <td>{{ friend['since'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <form action="/add" method="post">
+        <br>
+        <br>Name:
+        <input type="text" name="name">
+        <br>
+        <br> Age:
+        <input type="text" name="age">
+        <br><br>
+        <input type="submit" value="Add Friend">
+     </form>
+</body>
+
+</html>
